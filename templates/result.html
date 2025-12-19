@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="center">
+        {% if "Spam" in result %}
+            <h1 style="color:red;">🚨 {{ result }}</h1>
+        {% else %}
+            <h1 style="color:green;">✅ {{ result }}</h1>
+        {% endif %}
+        <p><strong>Message:</strong> {{ message }}</p>
+        <a href="/detect" class="btn">Test Another</a>
+        <br><a href="/">🏠 Home</a>
+    </div>
+</body>
+</html>
